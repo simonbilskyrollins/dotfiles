@@ -1,0 +1,9 @@
+# Set tab autocomplete to be case insensitive
+set completion-ignore-case on
+
+# Look at text after the cursor when autocompleting
+set skip-completed-text on
+
+# Press up/down arrows to perform filtered history search
+"\e[A": history-search-backward
+"\e[B": history-search-forward

@@ -28,6 +28,11 @@ alias gc='git commit -m'
 alias pull='git pull'
 alias push='git push'
 
+# Code coloring
+# cl() { 
+#     pygmentize -O style=monokai -f console256 -g "$1" | less -R 
+# }
+
 # Fun stuff
 alias fun='fortune | cowsay | lolcat'
 function funsay() {
@@ -36,11 +41,22 @@ function funsay() {
     rm tmp
 }
 
+PATH="$PATH:~/Library/Python/2.7/bin"
+
 # pyenv setup
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+pyenv virtualenvwrapper_lazy
 
 # python-virtualenv setup
 export WORKON_HOME=~/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON='/usr/bin/python'
 source /usr/local/bin/virtualenvwrapper.sh
+
+export NODE_PATH=/usr/local/lib/node_modules/
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
