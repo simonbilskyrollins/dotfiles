@@ -41,16 +41,11 @@ function funsay() {
     rm tmp
 }
 
-PATH="$PATH:~/Library/Python/2.7/bin"
+PATH="$HOME/Library/Python/2.7/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 # pyenv setup
 eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
-
-# python-virtualenv setup
-export WORKON_HOME=~/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON='/usr/bin/python'
-source /usr/local/bin/virtualenvwrapper.sh
 
 export NODE_PATH=/usr/local/lib/node_modules/
 
