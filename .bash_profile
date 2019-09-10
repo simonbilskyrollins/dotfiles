@@ -46,6 +46,7 @@ PATH="$HOME/.local/bin:$PATH"
 
 # pyenv setup
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 export NODE_PATH=/usr/local/lib/node_modules/
 
